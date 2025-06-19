@@ -1,0 +1,29 @@
+# Maven 
+target/ 
+*.jar 
+*.war 
+*.ear 
+*.class 
+# IDE 
+.idea/ 
+*.iml 
+.vscode/ 
+# OS 
+.DS_Store 
+Thumbs.db 
+# Logs 
+*.log 
+# Ignorar directorios del usuario 
+# Ignorar directorios del usuario 
+target/ 
+*.jar 
+*.war 
+*.ear 
+*.class 
+.idea/ 
+*.iml 
+.vscode/ 
+.DS_Store 
+Thumbs.db 
+*.log 
+../* 
