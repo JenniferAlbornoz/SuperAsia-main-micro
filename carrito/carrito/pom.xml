@@ -8,10 +8,10 @@
 		<version>3.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.superasia.carrito</groupId>
-	<artifactId>carrito</artifactId>
+	<groupId>com.superasia.inventario</groupId>
+	<artifactId>inventario</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>carrito</name>
+	<name>inventario</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -37,6 +37,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- Driver Oracle JDBC - AGREGADO -->
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc11</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
