@@ -1,0 +1,102 @@
+{
+  "info": {
+    "name": "SuperAsia Microservicios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Listar Usuarios",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8081/usuarios"
+          }
+        },
+        {
+          "name": "Crear Usuario",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8081/usuarios",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juan Perez\",\n  \"email\": \"juan.perez@mail.com\"\n}"
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Inventario",
+      "item": [
+        {
+          "name": "Listar Productos",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8082/productos"
+          }
+        },
+        {
+          "name": "Crear Producto",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8082/productos",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Laptop\",\n  \"descripcion\": \"Laptop gaming\",\n  \"cantidad\": 10,\n  \"precio\": 1500.00\n}"
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Carrito",
+      "item": [
+        {
+          "name": "Obtener Carrito por Usuario",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8083/carritos/usuario/1"
+          }
+        },
+        {
+          "name": "Crear Carrito",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8083/carritos/usuario/1"
+          }
+        },
+        {
+          "name": "Agregar Item al Carrito",
+          "request": {
+            "method": "POST",
+            "url": "http://localhost:8083/carritos/1/items",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"productoId\": 2,\n  \"cantidad\": 3\n}"
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
