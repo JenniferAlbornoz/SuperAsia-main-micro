@@ -1,5 +1,6 @@
 package com.superasia.carrito.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,6 +23,7 @@ public class Carrito {
     private Long usuarioId;
 
     @OneToMany(mappedBy = "carrito", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<CarritoItem> items = new ArrayList<>();
 
     public void addItem(CarritoItem item) {
